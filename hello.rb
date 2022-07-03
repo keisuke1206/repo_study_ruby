@@ -16,10 +16,9 @@ end
 
 nums = [17,87,92,335,32]
   nums.each do |num|
-  case num
-    when num >= 10
+    if num >= 50
       puts "値の#{num}は50以上です"
-    else  num <=  10
+    else num <= 50
       puts "値の#{num}は50未満です"
+    end
   end
-end
