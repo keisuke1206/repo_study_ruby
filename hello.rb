@@ -22,3 +22,16 @@ nums = [17,87,92,335,32]
       puts "値の#{num}は50未満です"
     end
   end
+
+  numbers = [17,87,92,335,32]
+    numbers.each do |number|
+      if number >= 50 && number.even?
+        puts "値の#{number}は50以上で偶数です"
+      elsif number >= 50 && number.odd?
+        puts "値の#{number}は50以上で奇数です"
+      elsif number <= 50 && number.even?
+        puts "値の#{number}は50未満で偶数です"
+      else number <= 50 && number.odd?
+        puts "値の#{number}は50未満で奇数です"
+      end
+    end
