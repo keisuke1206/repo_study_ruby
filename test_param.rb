@@ -8,3 +8,7 @@ val = ARGV[0]
       puts "#{i+1}回目の表示" 
     end
   puts "#{val}回の繰り返しを終了"
+
+val = ARGV[0]
+puts val
+puts val.class 
