@@ -13,4 +13,9 @@ puts "#{val}回の繰り返しを終了"
 
 val = ARGV[0]
   puts val
-  puts val.class 
+  puts val.class
+
+val = ARGV[0]
+val.to_i.times do |i|
+  puts rand (1..100)
+end
