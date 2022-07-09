@@ -17,5 +17,11 @@ val = ARGV[0]
 
 val = ARGV[0]
 val.to_i.times do |i|
-  puts rand (1..100)
+ puts rand(1..100)
+end
+
+val = ARGV[0]
+val.to_i.times do |i|
+arr = [rand(1..100)]
+  puts arr.sort
 end
