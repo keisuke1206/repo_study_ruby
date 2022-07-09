@@ -1,7 +1,10 @@
 puts ARGV[0]
 
-ARGV[0].times do {|i|
-  puts "#{ARGV[0]}回の繰り返しを開始"
-  puts "#{i+1}回目の表示" 
-  puts "#{ARGV[0]}回の繰り返しを終了"}
-end
+##ARGVで取れるのは文字列
+val = ARGV[0]
+  puts "#{val}回の繰り返しを開始"
+  ##to_i は 文字列を整数に返すメソッド。
+    val.to_i.times do |i|
+      puts "#{i+1}回目の表示" 
+    end
+  puts "#{val}回の繰り返しを終了"
