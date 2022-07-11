@@ -21,7 +21,7 @@ val.to_i.times do
 end
 
 val = ARGV[0]
-  val.to_i.times do
+val.to_i.times do
   num.sort = rand(100)
   puts num
 end
