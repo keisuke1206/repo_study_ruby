@@ -16,12 +16,12 @@ val = ARGV[0]
   puts val.class
 
 val = ARGV[0]
-val.to_i.times do |i|
+val.to_i.times do
  puts rand(1..100)
 end
 
 val = ARGV[0]
-val.to_i.times do |i|
-arr = [rand(1..100)]
-  puts arr.sort
+  val.to_i.times do
+  num.sort = rand(100)
+  puts num
 end
