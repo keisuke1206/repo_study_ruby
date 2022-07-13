@@ -21,7 +21,6 @@ val.to_i.times do
 end
 
 val = ARGV[0]
-val.to_i.times do
-  num.sort = rand(100)
+array = Array.new(val){rand 100 }
+num = array.sort
   puts num
-end
