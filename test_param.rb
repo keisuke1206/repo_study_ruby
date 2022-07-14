@@ -23,7 +23,7 @@ end
 array = Array.new()
 val = ARGV[0]
 val.to_i.times do
- num = rand(1..100)
+num = rand(1..100)
 array.push(num)
 end
   puts array.sort
