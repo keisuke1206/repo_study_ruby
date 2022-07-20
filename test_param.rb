@@ -43,7 +43,7 @@ val.to_i.times do |i|
   numbers1 = array1.sort
   numbers2 = array2.sort
 
-  numbers1.zip(numbers2) do |x,y|
+numbers1.zip(numbers2) do |x,y|
     puts "#{i+1}つ目の値「#{x}」と「#{y}」を足すと「#{x + y}」です"
-  end
+end
 end
