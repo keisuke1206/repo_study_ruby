@@ -20,11 +20,12 @@ val.to_i.times do
  puts rand(1..100)
 end
 
+
 array = Array.new()
 val = ARGV[0]
 val.to_i.times do
   num = rand(1..100)
-  array.push(num)
+array.push(num)
 end
   puts array.sort
 
@@ -32,18 +33,20 @@ val = ARGV[0]
   puts val
   puts val.class
 
+
 array1 = Array.new()
 array2 = Array.new()
 val = ARGV[0]
-val.to_i.times do |i|
+val.to_i.times do
   num1 = rand(1..100)
   num2 = rand(1..100)
   array1.push(num1)
   array2.push(num2)
-  numbers1 = array1.sort
-  numbers2 = array2.sort
+end
+
+numbers1 = array1.sort
+numbers2 = array2.sort
 
 numbers1.zip(numbers2) do |x,y|
-    puts "#{i+1}つ目の値「#{x}」と「#{y}」を足すと「#{x + y}」です"
-end
+  puts "「#{x}」と「#{y}」を足す。"
 end
