@@ -48,5 +48,6 @@ numbers1 = array1.sort
 numbers2 = array2.sort
 
 numbers1.zip(numbers2) do |x,y|
-  puts "「#{x}」と「#{y}」を足す。"
+ sum = x + y
+  puts "1つ目の値「#{x}」と「#{y}」を足すと「#{sum}」です"
 end
