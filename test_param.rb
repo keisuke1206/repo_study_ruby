@@ -61,7 +61,7 @@ end
 
 puts "----このような表示になる----"
 
-
+def Function
 val = ARGV[0]
 puts "----例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
 
@@ -72,3 +72,4 @@ val.to_i.times do
 end
 
 puts "----このような表示になる----"
+end
