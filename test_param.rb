@@ -51,3 +51,24 @@ numbers1.zip(numbers2).each_with_index do |(x,y), idx|
 sum = x + y
   puts "#{idx + 1}つ目の値「#{x}」と「#{y}」を足すと「#{sum}」です"
 end
+
+val = ARGV[0]
+puts "----例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
+
+val.to_i.times do
+  puts "関数での表示です"
+end
+
+puts "----このような表示になる----"
+
+
+val = ARGV[0]
+puts "----例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
+
+index = 0
+val.to_i.times do
+  puts "関数での表示です。#{index}はです。"
+  index += 1
+end
+
+puts "----このような表示になる----"
