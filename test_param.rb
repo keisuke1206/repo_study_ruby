@@ -52,24 +52,19 @@ sum = x + y
   puts "#{idx + 1}つ目の値「#{x}」と「#{y}」を足すと「#{sum}」です"
 end
 
-val = ARGV[0]
-puts "----例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
 
-val.to_i.times do
-  puts "関数での表示です"
+def sample_function
+  puts "関数での表示です。"
 end
 
-puts "----このような表示になる----"
-
-def Function
 val = ARGV[0]
-puts "----例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
+puts "---例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
 
 index = 0
 val.to_i.times do
-  puts "関数での表示です。#{index}はです。"
-  index += 1
+  puts sample_function
+  puts "インデックスは#{index}です。"
+index += 1
 end
 
 puts "----このような表示になる----"
-end
