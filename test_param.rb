@@ -53,18 +53,15 @@ sum = x + y
 end
 
 
-def sample_function
-  puts "関数での表示です。"
+def sample_function(index)
+val.to_i.times do
+  puts "関数での表示です。インデックスは#{index}です。"
+end  
 end
 
 val = ARGV[0]
 puts "---例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
 
-index = 0
-val.to_i.times do
-  puts sample_function
-  puts "インデックスは#{index}です。"
-index += 1
-end
+puts sample_function(ARGV[0])
 
 puts "----このような表示になる----"
