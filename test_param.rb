@@ -54,14 +54,31 @@ end
 
 
 def sample_function(index)
-val.to_i.times do
-  puts "関数での表示です。インデックスは#{index}です。"
-end  
-end
+  puts "関数での表示です。"
+  puts "インデックスは#{index}です。"
+end 
 
 val = ARGV[0]
 puts "---例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
 
-puts sample_function(ARGV[0])
+index = 0
+val.to_i.times do
+  puts sample_function(index)
+index += 1
+end
+
+puts "----このような表示になる----"
+
+def sample_function(index)
+  puts "関数での表示です。"
+  puts "インデックスは#{index}です。"
+end 
+
+val = ARGV[0]
+puts "---例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
+
+val.to_i.times do |index|
+  puts sample_function(index)
+end
 
 puts "----このような表示になる----"
