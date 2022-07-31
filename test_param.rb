@@ -114,8 +114,8 @@ end
 val = ARGV[0]
   puts "---例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
 
-  val.to_i.times do |index|
-    puts Array(index)
-  end
+val.to_i.times do |index|
+  puts Array(index)
+end
 
 puts "----このような表示になる----"
