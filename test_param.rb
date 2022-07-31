@@ -82,3 +82,25 @@ val.to_i.times do |index|
 end
 
 puts "----このような表示になる----"
+
+
+def array(number1,number2,number3)
+  sum = number1 * number2 * number3
+  puts "計算結果は#{sum}です"
+end
+puts array(2,5,3)
+
+
+def array(num1,num2,num3)
+  sum = num1 * num2 * num3
+  puts "計算結果は#{sum}です"
+end
+
+val = ARGV[0]
+  puts "---例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
+
+val.to_i.times do
+  puts array(2,5,3)
+end
+
+puts "----このような表示になる----"
