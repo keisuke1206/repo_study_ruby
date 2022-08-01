@@ -106,16 +106,19 @@ end
 puts "----このような表示になる----"
 
 
-def Array(index)
-sum = index + 1 + 10 + 100 
-  puts "計算結果は#{sum}です "
+def sample_array(index,param1,param2,param3)
+sum1 = index + param1
+sum2 = sum1 + param2
+sum3 = sum2 + param3
+sum4 = sum1 + sum2 + sum3
+ puts "計算結果は#{sum4}です" 
 end
 
 val = ARGV[0]
   puts "---例:パラメータが#{val}なら、#{val}回、関数を呼び出し---"
 
 val.to_i.times do |index|
-  puts Array(index)
+  puts sample_array(index,1,10,100)
 end
 
 puts "----このような表示になる----"
