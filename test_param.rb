@@ -122,3 +122,11 @@ val.to_i.times do |index|
 end
 
 puts "----このような表示になる----"
+
+
+def sample_number(number1,number2)
+  puts sum1 = number1 + number2
+  puts sum2 = number1 * number2
+end
+
+puts sample_number(5,6)
