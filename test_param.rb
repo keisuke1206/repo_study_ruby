@@ -107,11 +107,11 @@ puts "----このような表示になる----"
 
 
 def sample_array(index,param1,param2,param3)
-sum1 = index + param1
-sum2 = sum1 + param2
-sum3 = sum2 + param3
-sum4 = sum1 + sum2 + sum3
- puts "計算結果は#{sum4}です" 
+  sum1 = index + param1
+  sum2 = sum1 + param2
+  sum3 = sum2 + param3
+  sum4 = sum1 + sum2 + sum3
+  puts "計算結果は#{sum4}です" 
 end
 
 val = ARGV[0]
