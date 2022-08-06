@@ -124,9 +124,13 @@ end
 puts "----このような表示になる----"
 
 
-def sample_number(number1,number2)
+def sample_number1(number1,number2)
   puts sum1 = number1 + number2
+end
+
+def sample_number2(number1,number2)
   puts sum2 = number1 * number2
 end
 
-puts sample_number(5,6)
+puts sample_number1(5,6)
+puts sample_number2(5,6)
