@@ -134,3 +134,18 @@ end
 
 puts sample_number1(5,6)
 puts sample_number2(5,6)
+
+
+def sample_main1(val1,val2)
+  puts sum1 = val1 + val2
+end
+
+def sample_main2(val1,val2)
+  puts sum2 = val1 * val2
+end
+
+val1 = ARGV[0].to_i
+val2 = ARGV[1].to_i
+
+puts sample_main1(val1,val2)
+puts sample_main2(val1,val2)
