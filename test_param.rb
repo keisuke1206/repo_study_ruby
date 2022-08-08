@@ -147,5 +147,25 @@ end
 val1 = ARGV[0].to_i
 val2 = ARGV[1].to_i
 
-puts sample_main1(val1,val2)
-puts sample_main2(val1,val2)
+sample_main1(val1,val2)
+sample_main2(val1,val2)
+
+
+def sample_main1(val1,val2)
+  return val1 + val2
+end
+
+def sample_main2(val1,val2)
+  return val1 * val2
+end
+
+val1 = ARGV[0].to_i
+val2 = ARGV[1].to_i
+
+sum1 = sample_main1(val1,val2)
+sum2 = sample_main2(val1,val2)
+
+sum3 =sum2 - sum1 
+
+puts "関数2の結果は#{sample_main2(val1,val2)}で関数1の結果は#{sample_main1(val1,val2)}なので、
+減算すると#{sum3}です"
