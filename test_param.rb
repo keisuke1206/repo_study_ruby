@@ -186,7 +186,6 @@ def test_array2(val1,val2,val3)
 end
 
 def test_array3(val1,val2,val3)
-
 min = test_array1(val1,val2,val3)
 max = test_array2(val1,val2,val3)
 valsum = min + max
@@ -196,12 +195,14 @@ num1 = test_array3.sort
 beside = num1[1] * 2
 
 if valsum > beside
-  puts "大きい"
+  return "大きい"
 else
-  puts "小さい"
+  return "小さい"
 end
 end
 
+result = test_array3(val1,val2,val3)
+
 puts "関数1で一番小さな値を調べた結果は#{test_array1(val1,val2,val3)}です。"
 puts "関数2で一番大きな値を調べた結果は#{test_array2(val1,val2,val3)}です。"
-puts ("一番大きな値と一番小さな値を足した値は、真ん中の値の2倍よりも#{test_array3(val1,val2,val3)}です。")
+puts "一番大きな値と一番小さな値を足した値は、真ん中の値の2倍よりも#{result}です。"
