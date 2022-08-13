@@ -1,34 +1,4 @@
-val1 = ARGV[0].to_i
-val2 = ARGV[1].to_i
-val3 = ARGV[2].to_i
-
-def test_array1(val1,val2,val3)
-  test_array1 = [val1,val2,val3]  
-  return test_array1.min
-end
-
-def test_array2(val1,val2,val3)
-  test_array2 = [val1,val2,val3]
-  return test_array2.max
-end
-
-def test_array3(val1,val2,val3)
-
-min = test_array1(val1,val2,val3)
-max = test_array2(val1,val2,val3)
-valsum = min + max
-
-test_array3 = [val1,val2,val3]
-num1 = test_array3.sort
-beside = num1[1] * 2
-
-if valsum > beside
-  puts "大きい"
-else
-  puts "小さい"
-end
-end
-
-puts "関数1で一番小さな値を調べた結果は#{test_array1(val1,val2,val3)}です。"
-puts "関数2で一番大きな値を調べた結果は#{test_array2(val1,val2,val3)}です。"
-puts ("一番大きな値と一番小さな値を足した値は、真ん中の値の2倍よりも#{test_array3(val1,val2,val3)}です。")
+sample_numbers = [val1,val2,val3,val4,val5]
+sum = number * 3 + 10
+sum1 = sum.sum
+puts sum1 
