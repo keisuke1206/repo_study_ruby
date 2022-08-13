@@ -186,19 +186,19 @@ def test_array2(val1,val2,val3)
 end
 
 def test_array3(val1,val2,val3)
-min = test_array1(val1,val2,val3)
-max = test_array2(val1,val2,val3)
-valsum = min + max
+  min = test_array1(val1,val2,val3)
+  max = test_array2(val1,val2,val3)
+  valsum = min + max
 
-test_array3 = [val1,val2,val3]
-num1 = test_array3.sort
-beside = num1[1] * 2
+  test_array3 = [val1,val2,val3]
+  num1 = test_array3.sort
+  beside = num1[1] * 2
 
-if valsum > beside
-  return "大きい"
-else
-  return "小さい"
-end
+  if valsum > beside
+    return "大きい"
+  else
+    return "小さい"
+  end
 end
 
 result = test_array3(val1,val2,val3)
@@ -206,3 +206,28 @@ result = test_array3(val1,val2,val3)
 puts "関数1で一番小さな値を調べた結果は#{test_array1(val1,val2,val3)}です。"
 puts "関数2で一番大きな値を調べた結果は#{test_array2(val1,val2,val3)}です。"
 puts "一番大きな値と一番小さな値を足した値は、真ん中の値の2倍よりも#{result}です。"
+
+val1 = ARGV[0].to_i
+val2 = ARGV[1].to_i
+val3 = ARGV[2].to_i
+val4 = ARGV[3].to_i
+val5 = ARGV[4].to_i
+
+def sample_action(val1,val2,val3,val4,val5)
+  numbers = [val1,val2,val3,val4,val5]
+  numbers.each_with_index do |number, idx|
+  sum = number * 3 + 10
+    puts "#{idx}つ目のパラメータは#{number}で計算した結果は#{sum}です。"
+  end
+end
+
+return sample_action(val1,val2,val3,val4,val5)
+
+sample_numbers = [val1,val2,val3,val4,val5]
+  sample_number.each do |sample_number|
+  sum = [sample_number * 3 + 10].sum
+    puts sum
+  end
+end
+
+return sample_action1(val1,val2,val3,val4,val5)
