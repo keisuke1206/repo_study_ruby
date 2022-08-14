@@ -207,6 +207,7 @@ puts "関数1で一番小さな値を調べた結果は#{test_array1(val1,val2,v
 puts "関数2で一番大きな値を調べた結果は#{test_array2(val1,val2,val3)}です。"
 puts "一番大きな値と一番小さな値を足した値は、真ん中の値の2倍よりも#{result}です。"
 
+
 val1 = ARGV[0].to_i
 val2 = ARGV[1].to_i
 val3 = ARGV[2].to_i
@@ -221,13 +222,15 @@ def sample_action(val1,val2,val3,val4,val5)
   end
 end
 
-return sample_action(val1,val2,val3,val4,val5)
-
-sample_numbers = [val1,val2,val3,val4,val5]
-  sample_number.each do |sample_number|
-  sum = [sample_number * 3 + 10].sum
-    puts sum
-  end
+def sample_action1(val1,val2,val3,val4,val5)
+  val6 = val1 * 3 + 10
+  val7 = val2 * 3 + 10
+  val8 = val3 * 3 + 10
+  val9 = val4 * 3 + 10
+  val10 = val5 * 3 + 10
+  sum_number = val6 + val7 + val8 + val9 + val10
+    puts "計算された値を全て加算すると合計値は#{sum_number}です。"
 end
 
-return sample_action1(val1,val2,val3,val4,val5)
+sample_action(val1,val2,val3,val4,val5)
+sample_action1(val1,val2,val3,val4,val5)
