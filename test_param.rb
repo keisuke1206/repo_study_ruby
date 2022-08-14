@@ -215,22 +215,20 @@ val4 = ARGV[3].to_i
 val5 = ARGV[4].to_i
 
 def sample_action(val1,val2,val3,val4,val5)
+  result_list = []
   numbers = [val1,val2,val3,val4,val5]
   numbers.each_with_index do |number, idx|
-  sum = number * 3 + 10
+    sum = number * 3 + 10
     puts "#{idx}つ目のパラメータは#{number}で計算した結果は#{sum}です。"
+    result_list.push(sum)
   end
+  return result_list
 end
 
-def sample_action1(val1,val2,val3,val4,val5)
-  val6 = val1 * 3 + 10
-  val7 = val2 * 3 + 10
-  val8 = val3 * 3 + 10
-  val9 = val4 * 3 + 10
-  val10 = val5 * 3 + 10
-  sum_number = val6 + val7 + val8 + val9 + val10
-    puts "計算された値を全て加算すると合計値は#{sum_number}です。"
+def sample_action1(check_list)
+  sum_total = check_list.sum
+    puts "計算された値を全て加算すると合計値は#{sum_total}です。"
 end
 
-sample_action(val1,val2,val3,val4,val5)
-sample_action1(val1,val2,val3,val4,val5)
+sum_list = sample_action(val1,val2,val3,val4,val5)
+sample_action1(sum_list)
