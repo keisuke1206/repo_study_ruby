@@ -258,4 +258,51 @@ def conditions(val1,val2,val3)
   end
 end
 
+def conditions_result1(val1,val2,val3)
+  if val2 < 10
+    return "10より小さい"
+  elsif val2 > 10
+    return "10より大きい"
+  else val2 = 10
+    return "10と同じ"
+  end
+end
+
+def conditions1(val1,val2,val3)
+  if val2 < 10
+    return sum_number1 = val1 + val3
+  elsif val2 > 10
+    return sum_number1 = val1 * val3
+  else val2 = 10
+    return sum_number1 = 10
+  end
+end
+
+def conditions_result2(val1,val2,val3)
+  if val3 < 10
+    return "10より小さい"
+  elsif val3 > 10
+    return "10より大きい"
+  else val3 = 10
+    return "10と同じ"
+  end
+end
+
+def conditions2(val1,val2,val3)
+  if val3 < 10
+    return sum_number2 = val1 + val2
+  elsif val3 > 10
+    return sum_number2 = val1 * val2
+  else val3 = 10
+    return sum_number2 = 10
+  end
+end
+
+def sample_total(val1,val2,val3)
+  sum_total = conditions(val1,val2,val3) + conditions1(val1,val2,val3) + conditions2(val1,val2,val3)
+end
+
 puts  "パラメータの値は#{val1}で#{conditions_result(val1,val2,val3)}、計算結果は#{conditions(val1,val2,val3)}です。"
+puts  "パラメータの値は#{val2}で#{conditions_result1(val1,val2,val3)}、計算結果は#{conditions1(val1,val2,val3)}です。"
+puts  "パラメータの値は#{val3}で#{conditions_result2(val1,val2,val3)}、計算結果は#{conditions2(val1,val2,val3)}です。"
+puts "それぞれの計算結果の#{conditions(val1,val2,val3)}, #{conditions1(val1,val2,val3)},#{conditions2(val1,val2,val3)}を合計すると#{sample_total(val1,val2,val3)}です。"
