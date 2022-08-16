@@ -162,8 +162,8 @@ end
 val1 = ARGV[0].to_i
 val2 = ARGV[1].to_i
 
-sum1 = sample_main1(val1,val2)
-sum2 = sample_main2(val1,val2)
+  sum1 = sample_main1(val1,val2)
+  sum2 = sample_main2(val1,val2)
 
 sum3 =sum2 - sum1 
 
@@ -232,3 +232,30 @@ end
 
 sum_list = sample_action(val1,val2,val3,val4,val5)
 sample_action1(sum_list)
+
+
+val1 = ARGV[0].to_i
+val2 = ARGV[1].to_i
+val3 = ARGV[2].to_i
+
+def conditions_result(val1,val2,val3)
+  if val1 < 10
+    return "10より小さい"
+  elsif val1 > 10
+    return "10より大きい"
+  else val1 = 10
+    return "10と同じ"
+  end
+end
+
+def conditions(val1,val2,val3)
+  if val1 < 10
+    return sum_number = val2 + val3
+  elsif val1 > 10
+    return sum_number = val2 * val3
+  else val1 = 10
+    return sum_number = 10
+  end
+end
+
+puts  "パラメータの値は#{val1}で#{conditions_result(val1,val2,val3)}、計算結果は#{conditions(val1,val2,val3)}です。"
