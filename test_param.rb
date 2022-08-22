@@ -238,71 +238,17 @@ val1 = ARGV[0].to_i
 val2 = ARGV[1].to_i
 val3 = ARGV[2].to_i
 
-def conditions_result(val1,val2,val3)
-  if val1 < 10
-    return "10より小さい"
-  elsif val1 > 10
-    return "10より大きい"
-  else val1 = 10
-    return "10と同じ"
+def conditions(results)
+  results = [val1,val2,val3]
+  results.each do |result|
+  if result < 10
+    puts "10より小さい"
+  elsif result > 10
+    puts "10より大きい"
+  else
+    puts "10と同じ"
+  end
   end
 end
 
-def conditions(val1,val2,val3)
-  if val1 < 10
-    return sum_number = val2 + val3
-  elsif val1 > 10
-    return sum_number = val2 * val3
-  else val1 = 10
-    return sum_number = 10
-  end
-end
-
-def conditions_result1(val1,val2,val3)
-  if val2 < 10
-    return "10より小さい"
-  elsif val2 > 10
-    return "10より大きい"
-  else val2 = 10
-    return "10と同じ"
-  end
-end
-
-def conditions1(val1,val2,val3)
-  if val2 < 10
-    return sum_number1 = val1 + val3
-  elsif val2 > 10
-    return sum_number1 = val1 * val3
-  else val2 = 10
-    return sum_number1 = 10
-  end
-end
-
-def conditions_result2(val1,val2,val3)
-  if val3 < 10
-    return "10より小さい"
-  elsif val3 > 10
-    return "10より大きい"
-  else val3 = 10
-    return "10と同じ"
-  end
-end
-
-def conditions2(val1,val2,val3)
-  if val3 < 10
-    return sum_number2 = val1 + val2
-  elsif val3 > 10
-    return sum_number2 = val1 * val2
-  else val3 = 10
-    return sum_number2 = 10
-  end
-end
-
-def sample_total(val1,val2,val3)
-  sum_total = conditions(val1,val2,val3) + conditions1(val1,val2,val3) + conditions2(val1,val2,val3)
-end
-
-puts  "パラメータの値は#{val1}で#{conditions_result(val1,val2,val3)}、計算結果は#{conditions(val1,val2,val3)}です。"
-puts  "パラメータの値は#{val2}で#{conditions_result1(val1,val2,val3)}、計算結果は#{conditions1(val1,val2,val3)}です。"
-puts  "パラメータの値は#{val3}で#{conditions_result2(val1,val2,val3)}、計算結果は#{conditions2(val1,val2,val3)}です。"
-puts "それぞれの計算結果の#{conditions(val1,val2,val3)}, #{conditions1(val1,val2,val3)},#{conditions2(val1,val2,val3)}を合計すると#{sample_total(val1,val2,val3)}です。"
+puts conditions(results)
