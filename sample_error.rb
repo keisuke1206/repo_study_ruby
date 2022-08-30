@@ -18,4 +18,4 @@ params = [val1,val2,val3]
 
 params.each do |param|
 puts "パラメータの値#{param}は#{conditions(params)}で、計算結果はです。"
-end
+end 
