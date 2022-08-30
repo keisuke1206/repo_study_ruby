@@ -239,17 +239,19 @@ val2 = ARGV[1].to_i
 val3 = ARGV[2].to_i
 
 def conditions(results)
-  if results < 10
+  results.each do |result|
+  if result < 10
     return "10より小さい"
-  elsif results > 10
+  elsif result > 10
     return "10より大きい"
   else
     return "10と同じ"
   end
 end
+end
 
-results= [val1,val2,val3]
+params = [val1,val2,val3]
 
-conditions(results)
-
-puts results
+params.each do |param|
+puts "パラメータの値#{param}は#{conditions(params)}で、計算結果はです。"
+end
