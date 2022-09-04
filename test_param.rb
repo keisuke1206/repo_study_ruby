@@ -250,8 +250,36 @@ def conditions(results)
 end
 end
 
+def conditions_result(hikisu1,hikisu2, hikisu3)
+  if hikisu1 < 10
+    return hikisu2 + hikisu3 + hikisu1
+  elsif hikisu1 > 10
+    return hikisu2 * hikisu3 + hikisu1
+  else
+    return hikisu1
+  end
+end
+
+def conditions_sum(condition_sum_total)
+    puts "それぞれの計算結果の#{conditions_result(val1, val2, val3)},
+    #{conditions_result(val2, val3, val1)},
+    #{conditions_result(val3, val1, val2)}を合計すると#{condition_sum_total}です。"
+end
+
 params = [val1,val2,val3]
 
-params.each do |param|
-puts "パラメータの値#{param}は#{conditions(params)}で、計算結果はです。"
-end
+hikisu1,hikisu2,hikisu3 = [val1,val2,val3]
+# val1を判定して計算
+puts "パラメータの値#{val1}は#{conditions(params)}で、計算結果#{conditions_result(val1, val2, val3)}はです。" 
+
+hikisu1,hikisu2,hikisu3 = [val2,val3,val1]
+# val2を判定して計算
+puts "パラメータの値#{val2}は#{conditions(params)}で、計算結果#{conditions_result(val2, val3, val1)}はです。" 
+
+hikisu1,hikisu2,hikisu3 = [val3,val1,val2]
+# val3を判定して計算
+puts "パラメータの値#{val3}は#{conditions(params)}で、計算結果#{conditions_result(val3, val1, val2)}はです。"
+
+condition_sum_total = conditions_result(val1, val2, val3) + conditions_result(val2, val3, val1) + conditions_result(val3, val1, val2)
+
+puts "それぞれの計算結果の#{conditions_result(val1, val2, val3)},#{conditions_result(val2, val3, val1)},#{conditions_result(val3, val1, val2)}を合計すると#{condition_sum_total}です。"
