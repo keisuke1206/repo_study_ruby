@@ -19,3 +19,12 @@ puts val2.addition_sum
 puts val2.multiplication_sum
 puts val3.addition_sum
 puts val3.multiplication_sum
+
+
+require './test_object_class.rb'
+param1 = Sample.new(ARGV[0])
+param2 = Sample.new(ARGV[1])
+
+puts param1.process
+puts param2.arrangement
+
