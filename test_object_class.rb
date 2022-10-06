@@ -32,28 +32,34 @@ class Sum
 end
 
 
-class Number
-  def initialize(plus,minus,increment,random,val)
-    @plus = plus
-    @minus = minus
-    @increment = increment
-    @random = random
-    @val = val
+class Sample
+  def initialize(value)
+    @param = value
   end
 
   def process
-    if @plus
-      puts "処理パターン:#{plus}"
+    if @param == "plus"
+      puts "処理パターン:plus"
     else
-      puts "処理パターン:#{minus}"
+      puts "処理パターン:minus"
     end
   end
 
   def arrangement
-    if @increment
-      puts " 配列パターン:#{increment}"
+    if @param == "increment"
+      puts "配列パターン:increment"
     else
-      puts "配列パターン:#{random}"
+      puts "配列パターン:random"
+    end
+  end
+
+  def create
+    if @param == "increment"
+      @param.times do |i|
+      puts i + @param
+    end
+    else 
+      puts "a"
     end
   end
 end
