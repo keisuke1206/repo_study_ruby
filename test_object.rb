@@ -28,5 +28,6 @@ param3 = Sample.new(ARGV[2].to_i)
 
 puts param1.process
 puts param2.arrangement
-puts param3.create
+puts param3.create 
+puts "a"
 
