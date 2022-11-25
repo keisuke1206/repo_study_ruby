@@ -26,4 +26,3 @@ sample = Sample.new(ARGV[0],ARGV[1])
 
 puts sample.check1
 puts sample.check2
-puts "a"
