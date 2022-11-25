@@ -33,33 +33,24 @@ end
 
 
 class Sample
-  def initialize(value)
-    @param = value
+  def initialize(process,arrangement)
+    @process = process
+    @arrangement = arrangement
   end
 
-  def process
-    if @param == "plus"
+  def check1
+    if @process == "plus"
       puts "処理パターン:plus"
     else
       puts "処理パターン:minus"
     end
   end
 
-  def arrangement
-    if @param == "increment"
+  def check2
+    if @arrangement == "increment"
       puts "配列パターン:increment"
     else
       puts "配列パターン:random"
-    end
-  end
-
-  def create
-    if @param == "increment"
-      @param.times do |i|
-      puts i + @param
-    end
-    else 
-      puts "a"
     end
   end
 end

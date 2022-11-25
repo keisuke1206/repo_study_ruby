@@ -22,12 +22,8 @@ puts val3.multiplication_sum
 
 
 require './test_object_class.rb'
-param1 = Sample.new(ARGV[0])
-param2 = Sample.new(ARGV[1])
-param3 = Sample.new(ARGV[2].to_i)
+sample = Sample.new(ARGV[0],ARGV[1])
 
-puts param1.process
-puts param2.arrangement
-puts param3.create 
+puts sample.check1
+puts sample.check2
 puts "a"
-
