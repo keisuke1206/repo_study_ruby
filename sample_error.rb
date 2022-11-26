@@ -1,25 +1,11 @@
-class Number
-  def initialize(plus,minus,increment,random,val)
-    @plus = plus
-    @minus = minus
-    @increment = increment
-    @random = random
-    @val = val
-  end
+value= ARGV[0]
+value.to_i.times do
+  puts "作成された配列#{array}"
+end
 
-  def process
-    if @plus
-      puts "処理パターン:#{plus}"
-    else
-      puts "処理パターン:#{minus}"
-    end
-  end
 
-  def arrangement
-    if @increment
-      puts "配列パターン:#{increment}"
-    else
-      puts "配列パターン:#{random}"
-    end
-  end
+val= ARGV[0]
+val.to_i = 2
+for i in 1..val do
+  puts i
 end
