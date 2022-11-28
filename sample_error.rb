@@ -1,11 +1,7 @@
-value= ARGV[0]
-value.to_i.times do
-  puts "作成された配列#{array}"
+val= ARGV[0].to_i
+sum = val + val -1
+i = 0
+for i in val..sum do
+  i
 end
-
-
-val= ARGV[0]
-val.to_i = 2
-for i in 1..val do
-  puts i
-end
+puts i
