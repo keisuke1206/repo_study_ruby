@@ -1,7 +1,6 @@
 val= ARGV[0].to_i
-sum = val + val -1
-i = 0
-for i in val..sum do
-  i
+value = val + val -1
+for i in val..value do
+  sum = [i.to_s].join
+  puts sum
 end
-puts i
