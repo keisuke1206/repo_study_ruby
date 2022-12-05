@@ -33,9 +33,10 @@ end
 
 
 class Sample
-  def initialize(process,arrangement)
+  def initialize(process,arrangement,value)
     @process = process
     @arrangement = arrangement
+    @value = value
   end
 
   def check1
@@ -51,6 +52,24 @@ class Sample
       puts "配列パターン:increment"
     else
       puts "配列パターン:random"
+    end
+  end
+
+  def check3
+    if @arrangement == "increment"
+    value_end = @value + @value - 1
+    increment_text = ''
+      for i in @value..value_end do
+        increment_text = increment_text + i.to_s
+      end
+      puts "作成された配列:#{increment_text}"
+    
+    else
+      random_text = ''
+      @value.times { |n| random_text = n}
+        random_text.random(1..100)
+        random_text = random_text + random_text.to_s
+        puts "作成された配列:#{random_text}"
     end
   end
 end
