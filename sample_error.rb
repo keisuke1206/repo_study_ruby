@@ -1,7 +1,6 @@
 val= ARGV[0].to_i
-value = val + val -1
-for i in val..value do
-  sum = [i.to_s].join
+random_text = ''
+val.times do
+  random_text = random_text.random(1..100)
+  puts "作成された配列:#{random_text}"
 end
-
-puts "作成された配列:#{sum}"
