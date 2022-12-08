@@ -71,5 +71,6 @@ class Sample
       }
       puts "作成された配列:#{value_text}"
     end
+    @text = value_text
   end
 end
