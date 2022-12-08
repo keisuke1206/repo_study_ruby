@@ -58,19 +58,18 @@ class Sample
   def check3
     if @arrangement == "increment"
     value_end = @value + @value - 1
-    increment_text = ''
+    value_text = ''
       for i in @value..value_end do
-        increment_text = increment_text + i.to_s
+        value_text = value_text + i.to_s
       end
-      puts "作成された配列:#{increment_text}"
-    
+      puts "作成された配列:#{value_text}"
     else
-      random_text = ''
+      value_text = ''
       @value.times {
         random = rand(1..100)
-        random_text = random_text + random.to_s
+        value_text = value_text + random.to_s
       }
-      puts "作成された配列:#{random_text}"
+      puts "作成された配列:#{value_text}"
     end
   end
 end
