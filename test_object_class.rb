@@ -66,10 +66,11 @@ class Sample
     
     else
       random_text = ''
-      @value.times { |n| random_text = n}
-        random_text.random(1..100)
-        random_text = random_text + random_text.to_s
-        puts "作成された配列:#{random_text}"
+      @value.times {
+        random = rand(1..100)
+        random_text = random_text + random.to_s
+      }
+      puts "作成された配列:#{random_text}"
     end
   end
 end
