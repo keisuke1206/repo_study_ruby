@@ -40,6 +40,7 @@ class Sample
   end
 
   def check1
+    puts "---check1"
     if @process == "plus"
       puts "処理パターン:plus"
     else
@@ -48,6 +49,7 @@ class Sample
   end
 
   def check2
+    puts "---check2"
     if @arrangement == "increment"
       puts "配列パターン:increment"
     else
@@ -56,6 +58,7 @@ class Sample
   end
 
   def check3
+    puts "---check3"
     if @arrangement == "increment"
     value_end = @value + @value - 1
     value_text = ''
@@ -71,6 +74,23 @@ class Sample
       }
       puts "作成された配列:#{value_text}"
     end
-    @text = value_text
   end
+
+  def check4
+    puts "---check4"
+    if @process == "plus" and  @arrangement == "increment"
+      value_end = @value + @value - 1
+      value_text = ''
+        for i in @value..value_end do
+          value_text = i
+        end
+      result = value_text.inject {|sum, val| 
+      sum + val 
+      }
+        puts "計算結果:#{result}"
+    else
+      puts "処理パターン:minus"
+    end
+  end
+
 end
