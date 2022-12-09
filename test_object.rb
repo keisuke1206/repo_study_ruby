@@ -27,3 +27,4 @@ sample = Sample.new(ARGV[0],ARGV[1],ARGV[2].to_i)
 puts sample.check1
 puts sample.check2
 puts sample.check3
+puts sample.check4
