@@ -61,36 +61,33 @@ class Sample
     puts "---check3"
     if @arrangement == "increment"
     value_end = @value + @value - 1
-    value_text = ''
+    @value_text = ''
       for i in @value..value_end do
-        value_text = value_text + i.to_s
+        @value_text = @value_text + i.to_s
       end
-      puts "作成された配列:#{value_text}"
+      puts "作成された配列:#{@value_text}"
     else
-      value_text = ''
+      @value_text = ''
       @value.times {
         random = rand(1..100)
-        value_text = value_text + random.to_s
+        @value_text = @value_text + random.to_s
       }
-      puts "作成された配列:#{value_text}"
+      puts "作成された配列:#{@value_text}"
     end
   end
 
   def check4
     puts "---check4"
-    if @process == "plus" and  @arrangement == "increment"
-      value_end = @value + @value - 1
-      value_text = ''
-        for i in @value..value_end do
-          value_text = i
-        end
-      result = value_text.inject {|sum, val| 
+    if @process == "plus"
+      sum_result = []
+      sum_result.push(@value_text.to_i)
+      result = sum_result.inject {|sum, val| 
       sum + val 
       }
         puts "計算結果:#{result}"
     else
       puts "処理パターン:minus"
+      
     end
   end
-
 end
