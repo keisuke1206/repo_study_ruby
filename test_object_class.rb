@@ -70,14 +70,14 @@ class Sample
       puts "作成された配列:#{@value_text}"
     else
       @value_text = ""
-      @value_make = ""
+      @value_make = []
       @value.times {
         random = rand(1..100)
         @value_text = @value_text + random.to_s
       }
       @value.times {
         random = rand(1..100)
-        @value_make = @value_make + random.to_i
+        @value_make.push(random)
       }
 
       puts "作成された配列:#{@value_text}"
@@ -87,13 +87,21 @@ class Sample
   def check4
     puts "---check4"
     if @process == "plus"
-      sum_result = @value_make
-      result = sum_result.inject {|sum, val| 
+      plus_result = @value_make
+      result = plus_result.inject {|sum, val| 
       sum + val 
       }
         puts "計算結果:#{result}"
     else
-      puts "処理パターン:minus" 
-     end
+      minus_result = @value_make
+      minus_res = minus_result.sort.reverse
+      
+      result = minus_res.inject(:-)
+      if result < 0
+        puts  "計算結果:#{0}"
+      else result > 0
+        "計算結果:#{result}"
+      end
+    end
   end
 end
