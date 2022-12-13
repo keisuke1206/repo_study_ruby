@@ -24,6 +24,7 @@ puts val3.multiplication_sum
 require './test_object_class.rb'
 sample = Sample.new(ARGV[0],ARGV[1],ARGV[2].to_i)
 
+puts sample.check
 puts sample.check1
 puts sample.check2
 puts sample.check3
