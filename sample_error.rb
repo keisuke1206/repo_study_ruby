@@ -1,8 +1,6 @@
 value = ARGV[0].to_i
-value_end = value + value - 1
-value_text = []
-  for i in value..value_end do
-    value_text = i
-  end
-result = value_text.inject(:+)
-  puts "計算結果:#{result}"
+if (1..10).cover?(value) then
+  puts "パラメータ3:1~10の範囲です。"
+else
+  puts  'パラメータ3は規定してない値を出力しております。やり直して下さい。'
+end
