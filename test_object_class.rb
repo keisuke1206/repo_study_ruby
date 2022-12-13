@@ -39,6 +39,32 @@ class Sample
     @value = value
   end
 
+  def check
+    puts "---check"
+    if  @process == "plus"
+      puts 'パラメータ1:plus'
+    elsif @process == "minus"
+      puts 'パラメータ1:minus'
+    else
+      puts  'パラメータ1は違うtextを入力しています。やり直して下さい。'
+    end
+
+    if  @arrangement == "increment"
+      puts 'パラメータ2:increment'
+    elsif @arrangement == "random"
+      puts  'パラメータ2:random'
+    else
+      puts  'パラメータ2は違うtextを入力しています。やり直して下さい。'
+    end
+
+    if (1..10).cover?(@value) then
+      puts "パラメータ3:1~10の範囲です。"
+    else
+      puts  'パラメータ3は規定してない値を出力しております。やり直して下さい。'
+    end
+  
+  end
+
   def check1
     puts "---check1"
     if @process == "plus"
