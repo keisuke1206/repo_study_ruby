@@ -25,7 +25,7 @@ require './test_object_class.rb'
 sample = Sample.new(ARGV[0],ARGV[1],ARGV[2].to_i)
 
 puts sample.check
-puts sample.check1
-puts sample.check2
-puts sample.check3
-puts sample.check4
+puts sample.calculation_text
+puts sample.array
+puts sample.array_make
+puts sample.calculation_result
