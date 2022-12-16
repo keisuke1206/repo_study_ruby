@@ -41,18 +41,14 @@ class Sample
 
   def check
     puts "---check"
-    if  @process == "plus"
-      puts 'パラメータ1:plus'
-    elsif @process == "minus"
-      puts 'パラメータ1:minus'
+    if  @process == "plus"  or  @process == "minus"
+      puts 'パラメータ1は正しく入力されています。'
     else
       puts  'パラメータ1は違うtextを入力しています。やり直して下さい。'
     end
 
-    if  @arrangement == "increment"
-      puts 'パラメータ2:increment'
-    elsif @arrangement == "random"
-      puts  'パラメータ2:random'
+    if  @arrangement == "increment" or  @arrangement == "random"
+      puts  'パラメータ2は正しく入力されています。'
     else
       puts  'パラメータ2は違うtextを入力しています。やり直して下さい。'
     end
@@ -65,26 +61,26 @@ class Sample
   
   end
 
-  def check1
-    puts "---check1"
+  def calculation_text
+    puts '---calculation_text'
     if @process == "plus"
-      puts "処理パターン:plus"
+      puts '処理パターン:plus'
     else
-      puts "処理パターン:minus"
+      puts '処理パターン:minus'
     end
   end
 
-  def check2
-    puts "---check2"
+  def array
+    puts '---array'
     if @arrangement == "increment"
-      puts "配列パターン:increment"
+      puts '配列パターン:increment'
     else
-      puts "配列パターン:random"
+      puts '配列パターン:random'
     end
   end
 
-  def check3
-    puts "---check3"
+  def array_make
+    puts '---array_make'
     if @arrangement == "increment"
     value_end = @value + @value - 1
     @value_text = ""
@@ -110,8 +106,8 @@ class Sample
     end
   end
 
-  def check4
-    puts "---check4"
+  def calculation_resultgit 
+    puts '---calculation_result'
     if @process == "plus"
       plus_result = @value_make
       result = plus_result.inject {|sum, val| 
